@@ -292,6 +292,14 @@ arm_pose(kalu,1,[(1,0,0,0),(400,-.25,-.1,-.2),(535,-.18,-.2,-.3),(675,0,0,0)])
 # Hardial not in room until next morning as a traditional reconstruction; his figure visible only in shots 5+
 nod(hardial,[(1,.05),(460,.20),(520,.18),(610,.05),(675,.05)])
 arm_pose(hardial,0,[(1,-.15,0,.1),(470,-.55,.25,.3),(570,-.3,.15,.1),(675,-.18,.1,.1)])
+# Hardial belongs to the *next morning* in Macauliffe's recorded Janamsakhi account.
+# Keep his entire rig outside the set until the explicit next-morning cut.
+hardial["root"].location=(-35, 34.1, 0)
+hardial["root"].keyframe_insert(data_path="location",frame=1)
+hardial["root"].keyframe_insert(data_path="location",frame=33*args.fps)
+hardial["root"].location=(-3.25,34.1,0)
+hardial["root"].keyframe_insert(data_path="location",frame=33*args.fps+1)
+
 # -------------------- Camera and shot timing --------------------
 bpy.ops.object.camera_add(location=(0,-12,3))
 cam=bpy.context.object;cam.name="Reel camera";cam.data.lens=36
