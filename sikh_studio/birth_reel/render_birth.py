@@ -103,7 +103,7 @@ def box(name,loc,dim,m,bev=0):
     mat(o,m)
     if bev:
         mod=o.modifiers.new("softened edges","BEVEL");mod.width=bev;mod.segments=2
-        mod2=o.modifiers.new("weighted normals","WEIGHTED_NORMAL")
+        # Workbench displays bevels directly; weighted normal modifier unsupported in some older builds.
     return o
 def sphere(name,loc,s,m,segments=16,rings=10):
     bpy.ops.mesh.primitive_uv_sphere_add(segments=segments,ring_count=rings,radius=1,location=loc)
