@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+* { box-sizing: border-box; }
+html,body {margin:0; padding:0; background:#0C100F;}
+#birth1469 {position:relative;width:540px;height:960px;overflow:hidden; background: radial-gradient(ellipse at 48% 43%, #372E22 0%, #171C1A 62%, #0A1113 100%); color:#F8F0E0;font-family:Georgia, 'Times New Roman', serif;}
+.grain{position:absolute;inset:0;z-index:15;opacity:.3;pointer-events:none;background-image:url('data:image/svg+xml,%3Csvg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency=".73" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)" opacity=".3"/%3E%3C/svg%3E');}
+.veil{position:absolute;inset:0;z-index:10;box-shadow:inset 0 0 110px #09100e;pointer-events:none}
+.safe{position:absolute;z-index:13;left:37px;right:37px;}
+.eyebrow{top:68px;font:700 18px system-ui,sans-serif;letter-spacing:6px;color:#D5B875}
+.line{position:absolute;left:38px;right:38px;height:1px;background:linear-gradient(90deg,transparent,#D5B875,transparent);opacity:.6}
+#topline{top:101px;}#bottomline{bottom:172px;}
+#chapter{top:118px;font:500 19px system-ui,sans-serif;letter-spacing:2px;color:#DABF8C}
+#mainTitle{top:190px;font-size:72px;line-height:.93;letter-spacing:-2px;font-weight:bold;text-transform:uppercase;text-shadow:0 9px 30px #0008}
+#smallTitle{top:346px;font:500 25px system-ui,sans-serif;letter-spacing:.7px;color:#F8DEC0}
+#year{position:absolute;right:-33px;top:330px;font:900 230px Georgia,serif;letter-spacing:-20px;opacity:.12;color:#ECC47D;z-index:1}
+#map{position:absolute;left:22px;top:420px;width:498px;height:360px;z-index:3;filter:drop-shadow(0 15px 22px #090F0D);}
+#map .edge{fill:rgba(165,126,66,.08);stroke:#CAA46C;stroke-width:1.8;stroke-linejoin:round}
+#map .river{fill:none;stroke:#6C918D;stroke-width:7;stroke-linecap:round;opacity:.75}
+#map .branch{fill:none;stroke:#7FA9A4;stroke-width:3;opacity:.75}
+#map .route{fill:none;stroke:#F5CB77;stroke-width:3.3;stroke-linecap:round;stroke-dasharray:6 11}
+#map .pin{fill:#E9B45A;stroke:#FFF3D4;stroke-width:2.4}
+#map .ring{fill:none;stroke:#E9B45A;stroke-width:2}
+#map .small{font:600 18px system-ui,sans-serif;fill:#FBE3BD;letter-spacing:1.5px}
+#map .sub{font:500 12px system-ui,sans-serif;fill:#C8B79B;letter-spacing:1.4px}
+#family{position:absolute;inset:245px 15px 145px 15px;z-index:6;opacity:0}
+#family svg{width:100%;height:100%;filter:drop-shadow(0 10px 16px #070a09)}
+#family .head{fill:#BE8E66;stroke:#5E4338;stroke-width:1.5}
+#family .shawl{fill:#CB866C;stroke:#E1B08B;stroke-width:2}
+#family .wrap{fill:#C2A36C;stroke:#E8CD9E;stroke-width:2}
+#family .robe{fill:#3F6869;stroke:#79A4A3;stroke-width:2}
+#family .baby{fill:#F1D6B0;stroke:#9B795C;stroke-width:2}
+#family .detail{fill:none;stroke:#EEDFC4;stroke-width:5;stroke-linecap:round}
+#childPin {position:absolute;bottom:269px;left:117px;z-index:13;font:700 20px system-ui,sans-serif;letter-spacing:3px;color:#F9D99E; opacity:0}
+#evidence{position:absolute;top:310px;left:34px;width:474px;z-index:11;opacity:0;}
+#evidence .tag{font:800 18px system-ui,sans-serif;letter-spacing:3px;color:#F1CA77;margin-bottom:22px}
+#evidence h2{font:bold 53px/1.04 Georgia,serif;margin:0 0 18px;color:#FFF0D7}
+#evidence p{font:400 20px/1.36 system-ui,sans-serif;margin:0;max-width:452px;color:#E7D8C1}
+#dateStamp{position:absolute;bottom:256px;right:44px;border:1px solid #BE945F;padding:12px 15px;font:600 18px system-ui,sans-serif;color:#E7CD9E;letter-spacing:2px;transform:rotate(-8deg);opacity:0}
+#subtitle{position:absolute;left:35px;right:35px;bottom:195px;text-align:center;z-index:14;font:800 26px/1.3 system-ui,sans-serif;letter-spacing:.5px;color:#FDF1D8;text-shadow:0 3px 5px #000,0 0 10px #000;}
+#foot{position:absolute;left:40px;right:40px;bottom:95px;text-align:center;color:#B99A6E;font:500 13px/1.4 system-ui,sans-serif;letter-spacing:1.2px;text-transform:uppercase;z-index:14}
+#timeline{position:absolute;left:40px;right:40px;bottom:83px;height:3px;background:#5D4B39;z-index:14}
+#timelineFill{height:100%;width:0;background:#F1C874;box-shadow:0 0 11px #E9B15F}
+#rays{position:absolute;top:10px;left:-75px;height:860px;width:700px;z-index:0;opacity:.35; transform-origin:55% 50%}
+#pulse{position:absolute;left:0;right:0;top:0;bottom:0;background:radial-gradient(circle at 55% 58%, transparent 0 80px,rgba(238,178,103,.14) 90px,transparent 260px);opacity:0;z-index:4}
+</style></head>
+<body><div id="birth1469" data-composition-id="nanak-birth-explainer" data-start="0" data-duration="14" data-width="540" data-height="960" data-fps="30">
+<div class="grain"></div><div class="veil"></div>
+<svg id="rays" viewBox="0 0 700 860" xmlns="http://www.w3.org/2000/svg"><g stroke="#D7AF64" opacity=".45" stroke-width="1"><circle cx="360" cy="380" r="180" fill="none"/><circle cx="360" cy="380" r="260" fill="none"/><circle cx="360" cy="380" r="350" fill="none"/><path d="M0,380H700 M360,0V860 M0,70L700,760 M0,690L700,70"/></g></svg>
+<div id="pulse"></div><div class="safe eyebrow">THE HISTORY OF GURU NANAK</div><div id="topline" class="line"></div>
+<div class="safe" id="chapter">PUNJAB · 15TH CENTURY</div><div class="safe" id="mainTitle">A BIRTH<br>IN 1469</div><div class="safe" id="smallTitle">Rai Bhoi di Talwandi</div>
+<div id="year">1469</div>
+<svg id="map" viewBox="0 0 498 360" xmlns="http://www.w3.org/2000/svg"><path class="edge" d="M42 102 L132 36 265 53 337 14 449 85 429 166 457 261 370 325 243 290 120 330 39 229 Z"/><path class="river" d="M99 46 C103 113 210 141 163 215S142 289 206 335"/><path class="river" d="M266 29 C219 102 303 164 259 226S251 282 292 328"/><path class="branch" d="M160 215C223 200 235 233 259 226"/><path class="route" d="M370 286 Q305 222 280 189 Q250 161 229 144"/><circle class="ring" cx="229" cy="144" r="35"/><circle class="ring" cx="229" cy="144" r="22"/><circle class="pin" cx="229" cy="144" r="8"/><text class="small" x="250" y="118">TALWANDI</text><text class="sub" x="280" y="141">(NANKANA SAHIB)</text><text class="sub" x="110" y="320">ANIMATED HISTORICAL MAP</text></svg>
+<div id="family"><svg viewBox="0 0 500 570" xmlns="http://www.w3.org/2000/svg"><ellipse cx="252" cy="520" rx="196" ry="32" fill="#070D0C" opacity=".55"/><g id="father"><path class="robe" d="M280 213 Q334 165 393 224 L447 508 Q380 536 264 510 Z"/><ellipse class="head" cx="345" cy="170" rx="49" ry="64"/><path class="wrap" d="M294 143 Q314 95 356 100 Q401 99 405 149 L294 149Z"/><path fill="#3E302C" d="M309 205Q342 261 377 209L364 251Q338 281 323 240Z"/><g id="fatherArm" style="transform-origin:314px 268px"><path d="M310 240 Q275 276 254 340" stroke="#3F6869" stroke-width="34" fill="none" stroke-linecap="round"/><circle cx="254" cy="340" r="15" fill="#BE8E66"/></g></g><g id="mother"><path class="shawl" d="M65 195 Q114 155 184 196 Q224 288 237 506 Q131 547 44 495Z"/><ellipse class="head" cx="153" cy="200" rx="49" ry="64"/><path class="shawl" d="M90 164Q131 98 185 140Q214 167 205 220Q182 172 150 164Q124 162 90 191Z"/><g id="motherArm" style="transform-origin:192px 298px"><path d="M189 274 Q205 314 243 339" stroke="#C6856D" stroke-width="30" fill="none" stroke-linecap="round"/><circle cx="243" cy="339" r="15" fill="#BD8F6B"/></g></g><g id="babyRig" style="transform-origin:250px 348px"><ellipse class="baby" cx="244" cy="348" rx="73" ry="39" transform="rotate(-13 244 348)"/><circle class="head" cx="198" cy="331" r="26"/><path class="detail" d="M238 324 Q251 348 285 349 M246 342 Q257 369 280 367"/></g><path d="M50 505H445" stroke="#BB9F72" stroke-width="7" stroke-linecap="round"/></svg></div>
+<div id="childPin">MATA TRIPTA · MEHTA KALU</div>
+<div id="evidence"><div class="tag">BIOGRAPHICAL SOURCES</div><h2>WHAT CAN<br>WE CONFIRM?</h2><p>Birthplace and parents appear in Sikh biographical sources.<br><br>Later birth details belong to Janamsakhi tradition.</p></div>
+<div id="dateStamp">SOURCE-LED</div>
+<div id="bottomline" class="line"></div><div id="subtitle">1469 · RAI BHOI DI TALWANDI</div><div id="foot">ILLUSTRATIVE RECONSTRUCTION · NOT A VERIFIED LIKENESS</div><div id="timeline"><div id="timelineFill"></div></div>
+<audio id="narration" data-start="0" data-duration="14" data-track-index="2" data-volume="0.92" src="voice.wav"></audio>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+  const tl = gsap.timeline({paused:true, defaults:{ease:'power3.out'}});
+  tl.from('#mainTitle',{opacity:0,y:120,scale:1.16,filter:'blur(14px)',duration:.9},.0)
+    .from('#chapter',{opacity:0,x:-90,duration:.65},.25)
+    .from('#smallTitle',{opacity:0,y:60,duration:.55},.65)
+    .from('#map',{opacity:0,y:110,scale:.82,duration:1.0},1.0)
+    .from('#map .river',{drawSVG:'0%',opacity:0,duration:1.1},1.15)
+    .from('#map .pin',{scale:0,transformOrigin:'50% 50%',duration:.35,ease:'back.out(2)'},1.8)
+    .to('#map',{scale:1.14,x:-22,y:-13,duration:1.9,ease:'sine.inOut'},2.0)
+    .to('#mainTitle',{opacity:0,y:-140,duration:.5},3.3)
+    .to('#smallTitle',{opacity:0,x:65,duration:.4},3.4)
+    .to('#map',{opacity:0,scale:1.6,duration:.6,overwrite:'auto'},4.0)
+    .fromTo('#family',{opacity:0,y:95},{opacity:1,y:0,duration:.85},4.1)
+    .to('#family',{scale:1.09,x:8,duration:4,ease:'sine.inOut'},4.5)
+    .fromTo('#childPin',{opacity:0,y:20},{opacity:1,y:0,duration:.35},5.05)
+    .fromTo('#pulse',{opacity:0},{opacity:.7,duration:.45,yoyo:true,repeat:1},6.4)
+    .to('#motherArm',{rotation:-13,duration:1.5,transformOrigin:'192px 298px',yoyo:true,repeat:1},5)
+    .to('#fatherArm',{rotation:10,duration:1.2,transformOrigin:'314px 268px',yoyo:true,repeat:1},5.7)
+    .to('#babyRig',{rotation:-4,duration:1.1,transformOrigin:'250px 348px',yoyo:true,repeat:2},5.1)
+    .to('#childPin',{opacity:0,duration:.32},8.75)
+    .to('#family',{opacity:0,scale:1.2,y:-65,duration:.5},8.9)
+    .fromTo('#evidence',{opacity:0,x:70},{opacity:1,x:0,duration:.7},9.3)
+    .fromTo('#dateStamp',{opacity:0,scale:1.9,rotation:2},{opacity:1,scale:1,rotation:-8,duration:.35,ease:'back.out(2.5)'},11.0)
+    .to('#rays',{rotation:11,duration:14,ease:'none'},0)
+    .to('#timelineFill',{width:'100%',duration:14,ease:'none'},0)
+    .set('#subtitle',{textContent:'A SON WAS BORN TO TRIPTA AND KALU'},4.3)
+    .set('#subtitle',{textContent:'THE CHILD WAS NAMED NANAK'},7.0)
+    .set('#subtitle',{textContent:'TRADITION MUST BE LABELLED AS TRADITION'},10.15)
+    .set('#subtitle',{textContent:'THIS IS A HISTORICAL RECONSTRUCTION'},13.0);
+ window.__timelines=window.__timelines||{};
+ window.__timelines['nanak-birth-explainer']=tl;
+</script>
+</div></body></html>

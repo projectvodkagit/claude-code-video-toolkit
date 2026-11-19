@@ -1,0 +1,45 @@
+name: "HyperFrames: Sikh history visual proof"
+on:
+  push:
+    branches: [feat/hyperframes-reel-pilot]
+    paths:
+      - "sikh_studio/hyperframes_birth/**"
+      - ".github/workflows/sikh-hyperframes-proof.yml"
+  workflow_dispatch:
+jobs:
+  render-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install free audio and video tools
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg espeak
+      - name: Create free scratch narration
+        working-directory: sikh_studio/hyperframes_birth
+        run: espeak -v en-us -s 205 -f voice.txt -w voice.wav
+      - name: Check HyperFrames composition
+        working-directory: sikh_studio/hyperframes_birth
+        run: npx --yes hyperframes lint
+      - name: Render graphic-rich reel via real HyperFrames engine
+        working-directory: sikh_studio/hyperframes_birth
+        run: npx --yes hyperframes render --output hyperframes-nanak-proof.mp4 --fps 30 --quality draft --workers 1
+      - name: Verify video and audio tracks
+        working-directory: sikh_studio/hyperframes_birth
+        run: |
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 hyperframes-nanak-proof.mp4
+          ffprobe -v error -show_entries stream=codec_type,codec_name,width,height -of default=noprint_wrappers=1 hyperframes-nanak-proof.mp4
+          test "$(ffprobe -v error -select_streams v -show_entries stream=codec_type -of csv=p=0 hyperframes-nanak-proof.mp4)" = "video"
+      - name: Upload original visual pilot
+        uses: actions/upload-artifact@v4
+        with:
+          name: hyperframes-sikh-history-graphics-proof
+          path: |
+            sikh_studio/hyperframes_birth/hyperframes-nanak-proof.mp4
+            sikh_studio/hyperframes_birth/index.html
+            sikh_studio/hyperframes_birth/README.md
+          retention-days: 14
