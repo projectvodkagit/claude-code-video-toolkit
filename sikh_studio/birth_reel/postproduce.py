@@ -45,7 +45,7 @@ flt=(
  "[4:a]lowpass=f=500,volume=0.04,afade=t=in:st=0:d=3,"
  "afade=t=out:st=41:d=4[amb];"
  "[v][m1][m2][amb]amix=inputs=4:duration=longest:dropout_transition=0,"
- "alimiter=limit=0.94[a]"
+ "alimiter=limit=0.94,loudnorm=I=-17:TP=-1.5:LRA=9[a]"
 )
 run(*(video_input+[
  "-filter_complex",flt,"-filter_threads","1","-map","0:v:0","-map","[a]",
