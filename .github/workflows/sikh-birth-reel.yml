@@ -1,4 +1,4 @@
-name: Nanak birth: generate a 3D narrated reel
+name: "Nanak birth: generate a 3D narrated reel"
 on:
   workflow_dispatch:
   push:
