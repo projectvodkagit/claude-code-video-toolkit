@@ -1,0 +1,12 @@
+{
+  "id": "mother",
+  "seed": 1471,
+  "kind": "clay_person",
+  "colors": {
+    "top": "#925F4E",
+    "pants": "#584639",
+    "hair": "#30241E",
+    "skin": "#B18469"
+  },
+  "description": "Symbolic mother figure, not a historically attested likeness."
+}

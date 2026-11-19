@@ -1,0 +1,12 @@
+{
+  "id": "elder",
+  "seed": 1473,
+  "kind": "clay_person",
+  "colors": {
+    "top": "#756B59",
+    "pants": "#534C42",
+    "hair": "#41372B",
+    "skin": "#A17C60"
+  },
+  "description": "Symbolic adult figure; do not attribute invented quotations or identities."
+}

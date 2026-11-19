@@ -1,0 +1,12 @@
+{
+  "id": "midwife",
+  "seed": 1472,
+  "kind": "clay_person",
+  "colors": {
+    "top": "#756B5F",
+    "pants": "#4C453F",
+    "hair": "#4B443E",
+    "skin": "#A27D61"
+  },
+  "description": "Symbolic adult village figure, not historically attested."
+}

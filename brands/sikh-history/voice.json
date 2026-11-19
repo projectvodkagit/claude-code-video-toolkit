@@ -1,0 +1,16 @@
+{
+  "description": "Local scratch narration only by default. Replace with an approved licensed voice when ready.",
+  "voiceId": "",
+  "model": "eleven_multilingual_v2",
+  "qwen3": {
+    "speaker": "Ryan",
+    "language": "Auto",
+    "tone": "restrained and thoughtful",
+    "clone": null
+  },
+  "policies": {
+    "paidProvidersEnabled": false,
+    "voiceCloningRequiresPermission": true,
+    "punjabiPronunciationReview": true
+  }
+}
