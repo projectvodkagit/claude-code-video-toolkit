@@ -1,4 +1,4 @@
-# Guru Nanak Dev Ji — early-life pilot (45 seconds)
+# Guru Nanak Dev Ji  -  early-life pilot (45 seconds)
 
 This is an **unapproved historical/visual draft**, not a finished public video. The script deliberately identifies traditional Janamsakhi accounts as tradition.
 
