@@ -35,7 +35,7 @@ scene.render.film_transparent=False
 scene.world.color=(0.16,0.14,0.12)
 sh=scene.display.shading
 sh.light='STUDIO'
-sh.color_type='OBJECT'
+sh.color_type='MATERIAL'
 sh.background_type='WORLD'
 try:
     sh.show_shadows=True
