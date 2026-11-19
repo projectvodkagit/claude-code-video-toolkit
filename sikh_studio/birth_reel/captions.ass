@@ -1,0 +1,23 @@
+[Script Info]
+Title: Guru Nanak birth: historical reconstruction
+ScriptType: v4.00+
+PlayResX: 432
+PlayResY: 768
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,DejaVu Sans,27,&H00F9F1DE,&H00F9F1DE,&H00231A16,&HAA151519,1,0,0,0,100,100,0,0,1,2.5,1,2,26,26,100,1
+Style: Title,DejaVu Sans,35,&H00C6AB75,&H00C6AB75,&H00231A16,&HBB151519,1,0,0,0,100,100,1,0,1,2.5,1,8,27,27,70,1
+Style: Info,DejaVu Sans,20,&H00FFF4DA,&H00FFF4DA,&H00422218,&HAA151519,1,0,0,0,100,100,0,0,1,2,1,8,23,23,120,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.20,0:00:05.90,Title,,0,0,0,,TALWANDI | 1469
+Dialogue: 0,0:00:00.40,0:00:06.00,Caption,,0,0,0,,Rai Bhoi di Talwandi, Punjab.
+Dialogue: 0,0:00:06.00,0:00:11.00,Caption,,0,0,0,,Tripta and Mehta Kalu.
+Dialogue: 0,0:00:11.00,0:00:19.00,Caption,,0,0,0,,Their child was named Nanak.
+Dialogue: 1,0:00:19.00,0:00:38.00,Info,,0,0,0,,JANAMSAKHI TRADITION | NOT CONTEMPORARY EVIDENCE
+Dialogue: 0,0:00:19.00,0:00:27.00,Caption,,0,0,0,,Later texts mention a midwife, Daulatan.
+Dialogue: 0,0:00:27.00,0:00:33.00,Caption,,0,0,0,,And an astrologer named Hardial.
+Dialogue: 0,0:00:33.00,0:00:39.00,Caption,,0,0,0,,Later tradition, not eyewitness history.
+Dialogue: 0,0:00:39.00,0:00:45.00,Caption,,0,0,0,,Today: Nankana Sahib, Pakistan.

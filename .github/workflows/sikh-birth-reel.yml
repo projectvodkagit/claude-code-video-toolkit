@@ -1,0 +1,42 @@
+name: Nanak birth: generate a 3D narrated reel
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "feat/nanak-birth-reel-1469" ]
+    paths:
+      - "sikh_studio/birth_reel/**"
+      - ".github/workflows/sikh-birth-reel.yml"
+jobs:
+  birth-film:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install free local rendering tools
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y blender ffmpeg espeak-ng fonts-dejavu-core
+      - name: Generate actual moving 3D characters and village
+        run: |
+          mkdir -p build
+          blender -b -t 2 --python sikh_studio/birth_reel/render_birth.py -- --out build/birth1469_silent.mp4 --width 432 --height 768 --fps 15 --seconds 45
+      - name: Original music, narration, subtitles and MP4
+        run: |
+          python3 sikh_studio/birth_reel/postproduce.py --input build/birth1469_silent.mp4 --output build/guru_nanak_birth_1469_reel.mp4
+      - name: Verify runtime and audio+video streams
+        run: |
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 build/guru_nanak_birth_1469_reel.mp4
+          ffprobe -v error -show_entries stream=codec_type,codec_name,width,height -of default=noprint_wrappers=1 build/guru_nanak_birth_1469_reel.mp4
+          test "$(ffprobe -v error -select_streams a -show_entries stream=codec_type -of csv=p=0 build/guru_nanak_birth_1469_reel.mp4)" = "audio"
+          test "$(ffprobe -v error -select_streams v -show_entries stream=codec_type -of csv=p=0 build/guru_nanak_birth_1469_reel.mp4)" = "video"
+      - name: Upload video and editable references
+        uses: actions/upload-artifact@v4
+        with:
+          name: guru-nanak-birth-1469-reel
+          path: |
+            build/guru_nanak_birth_1469_reel.mp4
+            sikh_studio/birth_reel/sources.md
+            sikh_studio/birth_reel/AGENTS.md
+          retention-days: 14
