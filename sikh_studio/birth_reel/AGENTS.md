@@ -17,7 +17,7 @@ These decisions were made in chat and must persist across sessions:
 
 Production command on a machine with Blender, FFmpeg and eSpeak:
 
-    blender -b -t 2 --python sikh_studio/birth_reel/render_birth.py -- --out build/birth1469_silent.mp4
+    blender -b -t 2 --python sikh_studio/birth_reel/render_birth.py; --out build/birth1469_silent.mp4
     python3 sikh_studio/birth_reel/postproduce.py --input build/birth1469_silent.mp4 --output build/guru_nanak_birth_1469_reel.mp4
 
 GitHub Actions workflow: .github/workflows/sikh-birth-reel.yml; downloads finished reel as an artifact.

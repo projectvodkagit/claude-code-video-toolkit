@@ -35,7 +35,7 @@ scene.render.film_transparent=False
 scene.world.color=(0.16,0.14,0.12)
 sh=scene.display.shading
 sh.light='STUDIO'
-sh.color_type='MATERIAL'
+sh.color_type='OBJECT'
 sh.background_type='WORLD'
 try:
     sh.show_shadows=True
@@ -93,7 +93,9 @@ M={
 "thread":material("cotton threads","#B3A384"),
 }
 def mat(ob,m):
+    color = M[m].diffuse_color if isinstance(m, str) else m.diffuse_color
     ob.data.materials.append(M[m] if isinstance(m,str) else m)
+    ob.color = color
     return ob
 def box(name,loc,dim,m,bev=0):
     bpy.ops.mesh.primitive_cube_add(size=1,location=loc)
@@ -313,8 +315,8 @@ def camera_pose(frame,loc,target):
 # Hard cuts at boundaries; meaningful camera motion within shots.
 F=args.fps
 shots=[
-    (0,6,(1,-13,3.0),(0,2,1.75),(0,-9.5,2.8),(0,2.5,1.7)),
-    (6,11,(-5,-5.5,2.85),(-1,4,1.55),(-4,-4.3,2.60),(-.3,4,1.55)),
+    (0,6,(0,-10.0,2.5),(-2.8,-4.5,1.45),(-1.8,-6.4,2.4),(-3,-3,1.42)),
+    (6,11,(-4,-5,2.4),(-1,4,1.45),(-3,-3.6,2.3),(0,3,1.4)),
     (11,19,(1.5,28.0,2.1),(-.5,33.1,1.48),(1.15,29.25,2.0),(-.4,33.2,1.42)),
     (19,27,(-2.2,29.6,1.85),(-.6,33.15,1.5),(-1.6,30.1,1.65),(-.6,33.1,1.4)),
     (27,33,(3.1,28.8,2.3),(2.0,32.4,1.25),(2.1,29.6,2.20),(1.5,33.0,1.5)),

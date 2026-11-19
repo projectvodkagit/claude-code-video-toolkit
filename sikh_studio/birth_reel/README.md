@@ -1,4 +1,4 @@
-# Birth of Guru Nanak Dev Ji — 1469
+# Birth of Guru Nanak Dev Ji  -  1469
 
 This is a **45-second, 9:16, original stylized 3D reconstruction**, generated with Blender and edited using FFmpeg. Unlike the older slideshow draft, characters have articulated rigs, real motion, moving cameras and modeled environments.
 
