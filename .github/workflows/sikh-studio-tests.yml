@@ -1,0 +1,25 @@
+name: Sikh history studio — offline validation
+on:
+  push:
+    paths:
+      - "sikh_studio/**"
+      - ".github/workflows/sikh-studio-tests.yml"
+  pull_request:
+    paths:
+      - "sikh_studio/**"
+      - ".github/workflows/sikh-studio-tests.yml"
+  workflow_dispatch:
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Validate historical-source map and episode manifest
+        run: python3 sikh_studio/pipeline.py validate sikh_studio/episodes/guru-nanak-early-life
+      - name: Run offline renderer and audio tests
+        run: python3 -m unittest discover -s sikh_studio/tests -v
