@@ -1,0 +1,32 @@
+{
+  "episode_id": "guru-nanak-early-life",
+  "fact_check_policy": "Separate scholarly consensus, Janamsakhi tradition, and theological interpretation. Every exact quotation needs page and edition verification before publication.",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "The Sikh Religion, Volume I: Life of Guru Nanak",
+      "author": "Max Arthur Macauliffe",
+      "year": 1909,
+      "kind": "historical_compilation",
+      "url": "https://en.wikisource.org/wiki/The_Sikh_Religion/Volume_1/Life_of_Guru_Nanak",
+      "note": "Compilation of tradition; not independent evidence that birth prodigies occurred."
+    },
+    {
+      "id": "S2",
+      "title": "A History of the Sikhs, Volume 1",
+      "author": "Khushwant Singh",
+      "year": 1963,
+      "kind": "secondary_scholarship",
+      "url": "https://archive.org/search?query=A%20History%20of%20the%20Sikhs%20Khushwant%20Singh",
+      "note": "Use an authenticated edition for dates, historical context and competing accounts."
+    },
+    {
+      "id": "S3",
+      "title": "Janamsakhi Tradition: An Analytical Study",
+      "author": "Sikh scholarship",
+      "kind": "traditional_narrative_scholarship",
+      "url": "https://www.sikhmissionarysociety.org/sms/smspublications/JanamsakhiTraditionAnAnalyticalStudy.pdf",
+      "note": "Used to qualify later birth and childhood narratives."
+    }
+  ]
+}

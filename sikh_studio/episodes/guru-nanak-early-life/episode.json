@@ -1,0 +1,210 @@
+{
+  "id": "guru-nanak-early-life",
+  "title": "What made Guru Nanak Dev Ji different?",
+  "format": "9:16",
+  "fps": 24,
+  "duration_seconds": 45,
+  "language": "en",
+  "status": "unapproved_draft",
+  "requires_human_approval": true,
+  "paid_generation_allowed": false,
+  "brand": "sikh-history",
+  "style": "Cinematic stylized 3D with visible meaningful character acting; restrained period atmosphere; no still montage.",
+  "policies": {
+    "no_slideshow": true,
+    "require_acting_and_motion": true,
+    "no_fabricated_quotes": true,
+    "mark_tradition_as_tradition": true,
+    "no_supernatural_effects_presented_as_fact": true,
+    "release_approval_required": true
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Guru Nanak was born in 1469, traditionally associated with Talwandi",
+      "status": "historical_consensus",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Mata Tripta and Mehta Kalu are identified as his parents in the traditional biography",
+      "status": "traditional_and_scholarly",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "One Janamsakhi-derived birth account describes an unusual laugh-like sound",
+      "status": "janamsakhi_tradition",
+      "source_ids": [
+        "S1",
+        "S3"
+      ]
+    },
+    {
+      "id": "C4",
+      "text": "The sacred-thread episode belongs to the childhood tradition and is transmitted in multiple accounts",
+      "status": "janamsakhi_tradition",
+      "source_ids": [
+        "S1",
+        "S3"
+      ]
+    },
+    {
+      "id": "C5",
+      "text": "The sacred-thread narrative emphasizes compassion, contentment and truth",
+      "status": "scriptural_teaching",
+      "source_ids": [
+        "S1"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "child-nanak",
+      "file": "kits/sikh-history/cast/child-nanak.json",
+      "status": "artistic_concept_needs_review"
+    },
+    {
+      "id": "mother",
+      "file": "kits/sikh-history/cast/mother.json",
+      "status": "artistic_concept_needs_review"
+    },
+    {
+      "id": "midwife",
+      "file": "kits/sikh-history/cast/midwife.json",
+      "status": "artistic_concept_needs_review"
+    },
+    {
+      "id": "elder",
+      "file": "kits/sikh-history/cast/elder.json",
+      "status": "artistic_concept_needs_review"
+    }
+  ],
+  "shots": [
+    {
+      "id": "01_birth",
+      "duration": 4.5,
+      "type": "blender",
+      "clip": "clips/01_birth.mp4",
+      "characters": [
+        "mother",
+        "midwife"
+      ],
+      "action": "Mother cradles swaddled infant, midwife adjusts a blanket; faces and hands move naturally",
+      "camera": "slow medium tracking",
+      "claim_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    {
+      "id": "02_village",
+      "duration": 5.5,
+      "type": "blender",
+      "clip": "clips/02_village.mp4",
+      "characters": [
+        "elder"
+      ],
+      "action": "Village worker walks across courtyard carrying a woven basket; camera follows actor",
+      "camera": "wide into medium",
+      "claim_ids": [
+        "C1"
+      ]
+    },
+    {
+      "id": "03_birth_tradition",
+      "duration": 5,
+      "type": "blender",
+      "clip": "clips/03_birth_tradition.mp4",
+      "characters": [
+        "midwife",
+        "mother"
+      ],
+      "action": "Midwife listens and reacts thoughtfully; no magical glow or invented dialogue",
+      "camera": "close reverse angle",
+      "claim_ids": [
+        "C3"
+      ]
+    },
+    {
+      "id": "04_childhood",
+      "duration": 6,
+      "type": "blender",
+      "clip": "clips/04_childhood.mp4",
+      "characters": [
+        "child-nanak",
+        "elder"
+      ],
+      "action": "Child and elder walk and turn to face one another; thoughtful exchange without fabricated spoken words",
+      "camera": "eye-level tracking",
+      "claim_ids": [
+        "C4"
+      ]
+    },
+    {
+      "id": "05_thread",
+      "duration": 6,
+      "type": "blender",
+      "clip": "clips/05_thread.mp4",
+      "characters": [
+        "child-nanak",
+        "elder"
+      ],
+      "action": "Elder holds a symbolic thread; child gestures calmly toward it",
+      "camera": "hand insert into two-shot",
+      "claim_ids": [
+        "C4"
+      ]
+    },
+    {
+      "id": "06_response",
+      "duration": 6,
+      "type": "blender",
+      "clip": "clips/06_response.mp4",
+      "characters": [
+        "child-nanak",
+        "elder"
+      ],
+      "action": "Child places a hand to chest, elder pauses in reflection",
+      "camera": "slow lateral shot",
+      "claim_ids": [
+        "C5"
+      ]
+    },
+    {
+      "id": "07_compassion",
+      "duration": 7,
+      "type": "blender",
+      "clip": "clips/07_compassion.mp4",
+      "characters": [
+        "child-nanak",
+        "mother"
+      ],
+      "action": "Child offers practical help to a person; depict as thematic illustration, not a documented event",
+      "camera": "follow with close insert",
+      "claim_ids": [
+        "C5"
+      ]
+    },
+    {
+      "id": "08_ending",
+      "duration": 5,
+      "type": "blender",
+      "clip": "clips/08_ending.mp4",
+      "characters": [
+        "child-nanak"
+      ],
+      "action": "Child walks through courtyard at dawn, then turns toward the light",
+      "camera": "steady tracking",
+      "claim_ids": [
+        "C5"
+      ]
+    }
+  ]
+}

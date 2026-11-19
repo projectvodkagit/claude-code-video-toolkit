@@ -1,0 +1,57 @@
+{
+  "name": "Sikh History Reel Studio",
+  "description": "Research-led stylized 3D historical explainers; not photographic or documentary evidence.",
+  "version": "1.0.0",
+  "colors": {
+    "primary": "#C49B58",
+    "primaryLight": "#E5C68D",
+    "textDark": "#171E24",
+    "textMedium": "#40505A",
+    "textLight": "#F4EADA",
+    "bgLight": "#F5EAD7",
+    "bgDark": "#161C22",
+    "bgOverlay": "rgba(18,24,29,0.82)",
+    "divider": "#827153",
+    "shadow": "rgba(0,0,0,0.24)"
+  },
+  "fonts": {
+    "primary": "Georgia, 'Times New Roman', serif",
+    "mono": "ui-monospace, Menlo, monospace"
+  },
+  "spacing": {
+    "xs": 8,
+    "sm": 16,
+    "md": 24,
+    "lg": 48,
+    "xl": 80,
+    "xxl": 120
+  },
+  "borderRadius": {
+    "sm": 4,
+    "md": 8,
+    "lg": 12
+  },
+  "typography": {
+    "h1": {
+      "size": 86,
+      "weight": 700
+    },
+    "h2": {
+      "size": 68,
+      "weight": 700
+    },
+    "h3": {
+      "size": 48,
+      "weight": 700
+    },
+    "body": {
+      "size": 44,
+      "weight": 400
+    },
+    "label": {
+      "size": 32,
+      "weight": 500,
+      "letterSpacing": 2
+    }
+  }
+}

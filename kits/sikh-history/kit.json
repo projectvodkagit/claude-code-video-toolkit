@@ -1,0 +1,13 @@
+{
+  "description": "Reusable visual and character library for Sikh historical explainer reels. Figures are respectful fictional artistic depictions, not authenticated likenesses.",
+  "brand": "sikh-history",
+  "format": "9:16",
+  "backgrounds": "local",
+  "music": false,
+  "constraints": [
+    "No slideshow substitution",
+    "Never present Janamsakhi narratives as independently verified",
+    "No paid generation without explicit approval",
+    "No automatic publishing"
+  ]
+}

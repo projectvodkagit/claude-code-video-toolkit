@@ -1,0 +1,60 @@
+{
+  "title": "Generic Blender motion rig smoke test; NOT Sikh history footage",
+  "fps": 24,
+  "resolution": "640x360",
+  "engine": "eevee",
+  "set": {
+    "kind": "desk_room"
+  },
+  "cast": [
+    {
+      "id": "test-actor",
+      "kind": "clay_person",
+      "colors": {
+        "top": "#C6A36A",
+        "pants": "#4D4B40",
+        "hair": "#30251F",
+        "skin": "#B38A69"
+      }
+    }
+  ],
+  "shots": [
+    {
+      "id": "S1_wide",
+      "dur": 2,
+      "type": "wide"
+    },
+    {
+      "id": "S2_turn",
+      "dur": 2,
+      "type": "medium"
+    },
+    {
+      "id": "S3_react",
+      "dur": 2,
+      "type": "closeup"
+    }
+  ],
+  "beats": [
+    {
+      "at": "S1_wide+0.5",
+      "do": "blink"
+    },
+    {
+      "at": "S2_turn+0.1",
+      "do": "look",
+      "target": "ahead",
+      "dur": 0.5
+    },
+    {
+      "at": "S2_turn+0.6",
+      "do": "expression",
+      "face": "determined",
+      "dur": 0.4
+    },
+    {
+      "at": "S3_react+0.3",
+      "do": "blink"
+    }
+  ]
+}
