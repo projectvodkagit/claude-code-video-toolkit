@@ -1,4 +1,4 @@
-# Sikh history video producer — Codex / ChatGPT instructions
+# Sikh history video producer  -  Codex / ChatGPT instructions
 
 Read these instructions and the upstream toolkit's \`AGENTS.md\`, \`CLAUDE.md\`, \`docs/blender.md\` and \`.claude/skills/blender/SKILL.md\` before changing any video engine code.
 
