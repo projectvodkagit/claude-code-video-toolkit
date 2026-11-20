@@ -18,28 +18,33 @@ OUT.mkdir(exist_ok=True)
 
 SPACE = "Lightricks/LTX-2-3"
 PROMPT = (
-    "Single uninterrupted five-second cinematic shot, actual photographic human motion, "
-    "historically inspired late fifteenth century Punjabi village interior, "
-    "Rai Bhoi di Talwandi in 1469. A sun-baked clay and lime-plaster home with thick "
-    "timber ceiling beams, woven cotton floor mat, simple brass vessel, earthen courtyard "
-    "visible through an unadorned rectangular doorway. Atmospheric natural side light, "
-    "rich warm terracotta and deep indigo pigments, beautiful cinematic contrast, "
-    "texture on real handwoven cloth and wood grain, human faces with anatomically "
-    "correct eyes and hands, physically plausible living skin and subtle expression. "
-    "An adult Punjabi mother in historically plausible plain wrapped cotton garment "
-    "carefully cradles a baby fully swaddled in unbleached cloth, baby's face not shown. "
-    "A second adult woman nearby slowly leans forward and carefully straightens one corner "
-    "of the baby's cloth; the mother breathes, looks down at the infant and shifts "
-    "the bundle naturally; hands move and maintain correct number of fingers. "
-    "One continuous smooth gentle dolly-in with parallax behind both women, gentle "
-    "shallow depth of field, premium grounded historical movie cinematography, "
-    "subtle dust motes and realistic texture, expressive people who genuinely move, "
-    "not a painting or an animated photograph. No dialogue, only quiet cloth movement "
-    "and distant village activity. No text on screen, no watermarks, no magic, no glow "
-    "around the child, no invented supernatural events. No modern buildings, "
-    "no electrical lamps, no modern architecture, no modern Sikh religious symbols, "
-    "no lavish palace, no smiling directly into camera, no stylized cartoon, no clay "
-    "models. Artistic reconstruction only, not a claim about actual weather that day."
+    "Single uninterrupted five-second premium historical movie shot, genuinely moving "
+    "humans, a simple domestic room in the Punjabi village of Rai Bhoi di Talwandi "
+    "in the year 1469. Rich and filmic earthy pigments, burnt umber, faded madder red "
+    "and muted deep indigo, soft amber indirect light and beautiful deep shadows. "
+    "Hand-plastered earthen walls, ancient rough timber ceiling beams, a flat wooden "
+    "door opening into a small mud-walled courtyard, handcrafted copper water vessel, "
+    "low woven charpoy, no glass windows or contemporary urban buildings. "
+    "A Punjabi mother in a natural handwoven draped cotton shawl sits by the cot "
+    "holding exactly one small newborn. The single baby is a featureless tightly "
+    "wrapped small cotton bundle with the head and face hidden under a clean fold of "
+    "cloth; no infant skin, head, or fingers visible, no additional children. "
+    "A second adult woman in a simple period-appropriate cotton wrap leans in "
+    "slightly, gently adjusts the outer corner of the same bundle, then withdraws "
+    "one hand with believable shoulder and elbow movement. The mother looks down "
+    "at the cloth bundle the entire time; her breathing shifts it slightly, "
+    "and her hands carefully change their grip. One realistic interaction, "
+    "natural human anatomy and correct number of hands and fingers throughout. "
+    "One continuous medium-wide two-person composition, slow controlled "
+    "sideways dolly movement with real parallax, subject stays visible, no sudden "
+    "cuts, no tight close-up of the bundle. Very high quality cinematic drama "
+    "photography, natural film grain and realistic textile fibers. Gentle cloth "
+    "rustling and distant faint ambient courtyard sounds, no dialogue. "
+    "This is a respectful fictional artistic reconstruction, not an eyewitness "
+    "record. No modern gurdwaras, no Khalsa-era costumes or symbols, no modern "
+    "architecture, no magical light, no halo, no adult Guru Nanak portrait, "
+    "no cartoons, no Blender-like plastic figures, no artificial looking faces, "
+    "no title cards or text, no duplicated babies or merged anatomy."
 )
 
 def save_status(status, **kwargs):
@@ -85,7 +90,7 @@ def run():
     # Arguments follow the original Lightricks Space app.py order:
     # input_image, prompt, duration, enhance_prompt, seed, randomize_seed, height, width.
     # No source image so this is genuine text-to-video, not still-image animation.
-    job = client.submit(None, PROMPT, 5.0, False, 1469, False, 768, 512, api_name=endpoint)
+    job = client.submit(None, PROMPT, 5.0, False, 1470, False, 768, 512, api_name=endpoint)
     result = job.result(timeout=540)
     path = get_path(result)
     if not path:
