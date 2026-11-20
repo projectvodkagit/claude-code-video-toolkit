@@ -1,0 +1,113 @@
+name: "Guru Nanak birth 45s voiceover only"
+on:
+  push:
+    branches: [feat/guru-nanak-full-voiceover-only-45s]
+    paths:
+      - "sikh_studio/full_birth_reel/**"
+      - ".github/workflows/guru-nanak-full-45s.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        scene: [1, 2, 3, 5, 6, 7, 8, 9]
+    env:
+      GRADIO_ANALYTICS_ENABLED: "False"
+      HF_HUB_DISABLE_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install free video-model client
+        run: |
+          python -m pip install "gradio_client>=1.3,<3"
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: Generate one real moving clip without API credits
+        run: python sikh_studio/full_birth_reel/generate_one.py --shot ${{ matrix.scene }}
+      - name: Upload real moving video clip or failure report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-${{ matrix.scene }}
+          path: work/clips/
+          retention-days: 14
+          if-no-files-found: warn
+
+  voice:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install local voice engine
+        run: python -m pip install "kokoro-onnx>=0.4.9" soundfile
+      - name: Download free Apache-licensed Kokoro model
+        run: |
+          curl -fL --retry 2 --connect-timeout 20 https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/kokoro-v1.0.onnx -o kokoro-v1.0.onnx
+          curl -fL --retry 2 --connect-timeout 20 https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/voices-v1.0.bin -o voices-v1.0.bin
+      - name: Generate narration from captions source
+        run: python sikh_studio/full_birth_reel/narrate.py
+      - name: Upload spoken narration
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spoken-voice
+          path: work/audio/
+          retention-days: 14
+          if-no-files-found: warn
+
+  assemble:
+    needs: [generate, voice]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download all model-generated moving clips
+        uses: actions/download-artifact@v4
+        with:
+          pattern: visual-*
+          path: work/clips/
+          merge-multiple: true
+      - name: Download natural spoken narration
+        uses: actions/download-artifact@v4
+        with:
+          name: spoken-voice
+          path: work/audio/
+      - name: Download earlier verified LTX model birth footage
+        uses: actions/download-artifact@v4
+        with:
+          name: historical-human-motion-five-second-test
+          run-id: 44650529741
+          github-token: ${{ github.token }}
+          path: work/previous/
+      - name: Reuse the previously verified moving birth shot
+        run: |
+          mkdir -p work/clips
+          cp work/previous/talwandi_1469_real_motion_test_5s.mp4 work/clips/shot_04.mp4
+      - name: Install free local video and audio tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+      - name: Create full 45s film with only spoken caption text
+        run: python sikh_studio/full_birth_reel/assemble.py
+      - name: Upload completed MP4 or partial QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: guru-nanak-full-45s-voiceover-only
+          path: out/
+          retention-days: 14
+          if-no-files-found: warn

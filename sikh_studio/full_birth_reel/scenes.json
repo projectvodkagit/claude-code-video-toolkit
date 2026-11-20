@@ -1,0 +1,83 @@
+{
+  "title": "Guru Nanak Dev Ji birth, written facts and later traditions",
+  "duration": 45,
+  "format": "9:16",
+  "fps": 24,
+  "source_note": "Historical backdrop is artistic reconstruction. Later Janamsakhi details not contemporary eyewitness facts.",
+  "overlay_text_policy": "Only exact speech transcript as subtitles, no other visual text.",
+  "style": "Photorealistic live-action cinema, rural Punjab around year 1469, village Talwandi. Filmic warm ochre and indigo colors, period-appropriate plain handwoven cotton garments, unadorned mud-plastered homes, simple flat timber roofs, earthen paths, hand-woven household items, believable South Asian adults with anatomically correct hands and faces moving naturally. Cinematic 35mm dolly shot with genuine depth and parallax, living physical motion, no clay CGI, no still-photo animation, no modern houses, no electric lamps, no contemporary Sikh religious symbols, no invented miracles, no royal luxury or fantasy, no text, no writing on screen, no watermark, no titles or logos. Nine by sixteen portrait composition, centered subject, respectful artistic reconstruction not documentary footage.",
+  "scenes": [
+    {
+      "shot": 1,
+      "narration": "In fourteen sixty-nine, a child named Nanak was born in Punjab.",
+      "prompt": "One uninterrupted wide tracking shot through inhabited rural Punjabi village lane. A male villager carries a wicker basket while a woman passes with a copper vessel, distant people walk naturally past mud brick houses. Camera glides past wood doorway, expressive physical parallax, no modern architecture.",
+      "seed": 2161,
+      "seconds": 5,
+      "reuse_prior_clip": false
+    },
+    {
+      "shot": 2,
+      "narration": "His birthplace was Rai Bhoi di Talwandi, in the Punjab region.",
+      "prompt": "Continuous moving camera crossing simple village courtyard. Two ordinary adult villagers in earthy cotton wraps walk together carrying water in small clay pots, third villager opens wooden doorway. Clothes drape and hands move naturally. Houses low, clay-plastered, timber rafters. Slow dolly left.",
+      "seed": 2162,
+      "seconds": 5,
+      "reuse_prior_clip": false
+    },
+    {
+      "shot": 3,
+      "narration": "His father, Mehta Kalu, worked as a village accountant.",
+      "prompt": "Interior of humble historic village accounting room, anonymous adult Punjabi accountant working with a reed pen and handmade folio at a low wooden desk. Fingers shift paper and pen, he glances up, camera over shoulder pushes inward. A generic symbolic occupational reconstruction, no verified likeness, illegible paper.",
+      "seed": 2163,
+      "seconds": 5,
+      "reuse_prior_clip": false
+    },
+    {
+      "shot": 4,
+      "narration": "His mother was Mata Tripta, named in Sikh biographical accounts.",
+      "prompt": "Previously generated reviewed live-motion clip of mother holding one swaddled newborn in Talwandi household. Preserve original model footage.",
+      "seed": 2164,
+      "seconds": 5,
+      "reuse_prior_clip": true
+    },
+    {
+      "shot": 5,
+      "narration": "The details of his birth come largely from biographies written later.",
+      "prompt": "Cinematic close shot of mother's hands holding exactly one tightly swaddled infant in ivory woven cotton, baby face hidden, a second woman's hand adjusts one cloth fold gently. Bodies breathe and shift weight realistically, camera slow lateral track through rustic household. No duplicate baby, no extra fingers.",
+      "seed": 2165,
+      "seconds": 5,
+      "reuse_prior_clip": false
+    },
+    {
+      "shot": 6,
+      "narration": "These texts are known as Janamsakhis, or accounts of his life.",
+      "prompt": "Close-up centuries-later generic manuscript production, anonymous South Asian scribe's hands turning a handmade paper folio and using reed pen. Writing must be abstract and unreadable, no invented direct quotes. Believable finger movement, warm lamplit later manuscript interior, smooth moving camera. The scene represents records written later, not the day of birth.",
+      "seed": 2166,
+      "seconds": 5,
+      "reuse_prior_clip": false
+    },
+    {
+      "shot": 7,
+      "narration": "One describes a midwife named Daulatan, who attended the birth.",
+      "prompt": "Later Janamsakhi traditional account, respectful 1469 home reconstruction. Older Punjabi woman midwife gently adjusts edge of swaddling near seated younger mother with ONE infant, natural arm and eye movement, historically modest home, realistic clothing; never imply eyewitness footage, no speech or magic.",
+      "seed": 2167,
+      "seconds": 5,
+      "reuse_prior_clip": false
+    },
+    {
+      "shot": 8,
+      "narration": "Another describes Hardial, an astrologer, visiting the family the next morning.",
+      "prompt": "The following morning according to a later Janamsakhi tradition, humble Punjabi village home. Male guest with plain cotton wrap opens a folio while an adult father listens, other family in background. No predictions or dialogue. Gentle camera move, natural fingers, expressions, honest historical reconstruction.",
+      "seed": 2168,
+      "seconds": 5,
+      "reuse_prior_clip": false
+    },
+    {
+      "shot": 9,
+      "narration": "Nanak became the first Sikh Guru. Talwandi is now Nankana Sahib, Pakistan.",
+      "prompt": "Final establishing moving shot through ordinary historic Punjab village lane, people walking and carrying pots near low mud-plastered walls; camera cranes slightly down to street and tracks forward. Beautiful restrained period realism. No contemporary landmarks, religious buildings or signage, no words.",
+      "seed": 2169,
+      "seconds": 5,
+      "reuse_prior_clip": false
+    }
+  ]
+}
